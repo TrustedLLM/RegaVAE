@@ -23,3 +23,7 @@ For yahoo dataset,
 ```
 python main.py --train_file ../data/yahoo/yahoo.train.txt --valid_file ../data/yahoo/yahoo.valid.txt --per_gpu_train_batch_size 4 --model_name gpt2 --cycle_annealing
 ```
+For WP dataset,
+```
+python main.py --train_source_path ../data/writingPrompts/train.wp_source --train_target_path ../data/writingPrompts/train.wp_target --valid_source_path ../data/writingPrompts/valid.wp_source --valid_target_path ../data/writingPrompts/valid.wp_target --dataset_type wp --per_gpu_train_batch_size 4 --model_name gpt2 --cycle_annealing
+```
