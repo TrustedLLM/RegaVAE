@@ -88,7 +88,7 @@ python main.py --train_file ../data/yahoo/yahoo.train.txt \
 --eval_metrics
 ```
 
-###Generation
+### Generation
 For Yelp dataset,
 ```
 python main.py --generation \
