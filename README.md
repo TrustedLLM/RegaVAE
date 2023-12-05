@@ -14,11 +14,12 @@ Firstly,
 ```
 cd Step1
 ```
-For training Yelp dataset,
+### Training
+For Yelp dataset,
 ```
 python main.py --train_file ../data/yelp/yelp.train.txt --valid_file ../data/yelp/yelp.valid.txt --per_gpu_train_batch_size 4 --model_name gpt2 --cycle_annealing
 ```
-For training yahoo dataset,
+For yahoo dataset,
 ```
 python main.py --train_file ../data/yahoo/yahoo.train.txt --valid_file ../data/yahoo/yahoo.valid.txt --per_gpu_train_batch_size 4 --model_name gpt2 --cycle_annealing
 ```
