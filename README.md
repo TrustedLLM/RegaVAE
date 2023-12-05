@@ -22,7 +22,7 @@ python main.py --train_file ../data/yelp/yelp.train.txt \
 --per_gpu_train_batch_size 4 \
 --cycle_annealing
 ```
-For yahoo dataset,
+For Yahoo dataset,
 ```
 python main.py --train_file ../data/yahoo/yahoo.train.txt \
 --valid_file ../data/yahoo/yahoo.valid.txt \
@@ -42,4 +42,58 @@ python main.py --train_source_path ../data/writingPrompts/train.wp_source \
 The above are only the best adjusted hyperparameters. You can get a better Step1 model by passing other parameters. The model we trained is available at this [link](https://drive.google.com/drive/folders/1HmTqQmHSmP_VZUDV9ADM6QEHwE3SazDi?usp=sharing).
 
 ## Step2
+Firstly,
+```
+cd Step2
+```
 Step2 here corresponds to Step2 and Step3 in the figure. Before training, please rename the model trained in Step 1 to model_epoch_-1.pth and add it to the model generation path.
+
+### Training
+For Yelp dataset,
+```
+python main.py --train_file ../data/yelp/yelp.train.txt \
+--valid_file ../data/yelp/yelp.valid.txt \
+--per_gpu_train_batch_size 4 \
+--load_epoch -1 \
+--cycle_annealing
+```
+For Yahoo dataset,
+```
+python main.py --train_file ../data/yahoo/yahoo.train.txt \
+--valid_file ../data/yahoo/yahoo.valid.txt \
+--per_gpu_train_batch_size 4 \
+--load_epoch -1 \
+--cycle_annealing
+```
+
+### Test
+For Yelp dataset,
+```
+python main.py --train_file ../data/yelp/yelp.train.txt \
+--valid_file ../data/yelp/yelp.valid.txt \
+--per_gpu_train_batch_size 4 \
+--load_epoch -1 \
+--cycle_annealing \
+--eval \
+--eval_metrics
+```
+For Yahoo dataset,
+```
+python main.py --train_file ../data/yahoo/yahoo.train.txt \
+--valid_file ../data/yahoo/yahoo.valid.txt \
+--per_gpu_train_batch_size 4 \
+--load_epoch -1 \
+--cycle_annealing \
+--eval \
+--eval_metrics
+```
+
+###Generation
+For Yelp dataset,
+```
+python main.py --generation \
+--test_file ../data/yelp/yelp.test.txt \
+ --load_epoch -1 \
+--top_k 50 \
+--top_p 0.9
+```
