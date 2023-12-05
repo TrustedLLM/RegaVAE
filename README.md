@@ -40,3 +40,6 @@ python main.py --train_source_path ../data/writingPrompts/train.wp_source \
 --cycle_annealing
 ```
 The above are only the best adjusted hyperparameters. You can get a better Step1 model by passing other parameters. The model we trained is available at this [link](https://drive.google.com/drive/folders/1HmTqQmHSmP_VZUDV9ADM6QEHwE3SazDi?usp=sharing).
+
+## Step2
+Step2 here corresponds to Step2 and Step3 in the figure. Before training, please rename the model trained in Step 1 to model_epoch_-1.pth and add it to the model generation path.
