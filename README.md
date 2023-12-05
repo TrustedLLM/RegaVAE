@@ -8,3 +8,9 @@ Architecture of RegaVAE. Based on the training data, we first train a VAE to con
 
 ## Datasets
 Download three dataset from this [link](https://drive.google.com/drive/folders/1mcn6nqLDVvrGatKHbdbtDSj9PQI5Eu8S?usp=sharing). Unzip them and put them under the data directory.
+
+## Step1
+Firstly,
+```
+cd Step1
+```
