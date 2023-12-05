@@ -17,13 +17,26 @@ cd Step1
 ### Training
 For Yelp dataset,
 ```
-python main.py --train_file ../data/yelp/yelp.train.txt --valid_file ../data/yelp/yelp.valid.txt --per_gpu_train_batch_size 4 --model_name gpt2 --cycle_annealing
+python main.py --train_file ../data/yelp/yelp.train.txt \
+--valid_file ../data/yelp/yelp.valid.txt \
+--per_gpu_train_batch_size 4 \
+--cycle_annealing
 ```
 For yahoo dataset,
 ```
-python main.py --train_file ../data/yahoo/yahoo.train.txt --valid_file ../data/yahoo/yahoo.valid.txt --per_gpu_train_batch_size 4 --model_name gpt2 --cycle_annealing
+python main.py --train_file ../data/yahoo/yahoo.train.txt \
+--valid_file ../data/yahoo/yahoo.valid.txt \
+--per_gpu_train_batch_size 4 \
+--cycle_annealing
 ```
 For WP dataset,
 ```
-python main.py --train_source_path ../data/writingPrompts/train.wp_source --train_target_path ../data/writingPrompts/train.wp_target --valid_source_path ../data/writingPrompts/valid.wp_source --valid_target_path ../data/writingPrompts/valid.wp_target --dataset_type wp --per_gpu_train_batch_size 4 --model_name gpt2 --cycle_annealing
+python main.py --train_source_path ../data/writingPrompts/train.wp_source \
+--train_target_path ../data/writingPrompts/train.wp_target \
+--valid_source_path ../data/writingPrompts/valid.wp_source \
+--valid_target_path ../data/writingPrompts/valid.wp_target \
+--dataset_type wp \
+--per_gpu_train_batch_size 4 \
+--cycle_annealing
 ```
+The above are only the best adjusted hyperparameters. You can get a better Step1 model by passing other parameters. The model we trained is available at this [link](https://drive.google.com/drive/folders/1HmTqQmHSmP_VZUDV9ADM6QEHwE3SazDi?usp=sharing).
