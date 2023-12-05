@@ -46,7 +46,7 @@ Firstly,
 ```
 cd Step2
 ```
-Step2 here corresponds to Step2 and Step3 in the figure. Before training, please rename the model trained in Step 1 to model_epoch_-1.pth and add it to the model generation path.
+Step2 here corresponds to Step2 and Step3 in the figure. Before training, please rename the model trained in Step 1 to model_epoch_-1.pth and add it to the model generation path. In addition, please download the file in this [link](https://drive.google.com/file/d/1JYqrDwsumzDsUHgwdKopVBUuAkSgILNu/view?usp=drive_link) to the Step2 folder.
 
 ### Training
 For Yelp dataset,
